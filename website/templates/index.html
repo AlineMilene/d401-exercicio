@@ -1,45 +1,45 @@
 <!DOCTYPE html>
+{% load static %}
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <title>ONG</title>
 </head>
 
 <body>
-    <h1>Cadastro de Pessoas</h1>
-    <section>
-        <div>
-            <h3>Nome:</h3>
-            <input type="name">
-        </div>
-        <div>
-            <h3>Sobrenome:</h3>
-            <input type="name">
-        </div>
-        <div>
-            <h3>Data de Nascimento:</h3>
-            <input type="date">
-        </div>
-        <div>
-            <h3>CPF:</h3>
-            <input type="number" maxlength="15">
-        </div>
-        <div>
-            <h3>CEP:</h3>
-            <input type="number" maxlength="10">
-        </div>
-        <div>
-            <h3>Item de Doação:</h3>
-            <input type="boolean">
-        </div>
-        <div>
-            <h3>Data de Criação:</h3>
-            <input type="datetime">
-        </div>
-    </section>
+    <nav>
+        <h1>Cadastro de Pessoas</h1>
+    </nav>
+    <header>
+        <form action="/" method="post">
+            {% csrf_token %}
+    
+            <label for="">Nome: </label>
+            <input name="nome" type="text" required>
+    
+            <label for="">Sobrenome: </label>
+            <input name="sobrenome" type="text" required>
+
+            <hr>
+    
+            <label for="">Data de Nascimento: </label>
+            <input name="datanasc" type="date" required>
+    
+            <label for="">CPF: </label>
+            <input name="cpf" type="text" required>
+    
+            <label for="">CEP: </label>
+            <input name="cep" type="text" required>
+    
+            <label for="">Item de Doação: </label>
+            <input name="item_doacao" type="text" required>
+        </form>     
+    </header>
 </body>
 
 </html>

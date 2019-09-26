@@ -1,0 +1,31 @@
+body {
+    display: grid;
+    background-color: lightgray;
+    grid-template-areas: 'nav nav nav'
+                         'header header header';
+    grid-template-columns: 33.2vw 33.2vw 33.2vw;
+    grid-template-rows: 8vh 90vh; 
+    margin:0;
+}
+
+form{
+    align-items: baseline;
+    grid-area: form;
+}
+
+h1{
+    font-size: 27pt;
+    margin:0;
+}
+
+header{
+    grid-area: header;
+    margin: 2vh 1vw;
+}
+
+nav{
+    background-color: gray;
+    grid-area: nav;
+    text-align: center;
+}
+
